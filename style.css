@@ -67,7 +67,7 @@ body {
     position: relative;
 }
 
-/* graphic elements position absolute to the body */
+/* graphic elements are positioned absolute to the body */
 
 .graphic-element-saturated {
     height: 83vh;
