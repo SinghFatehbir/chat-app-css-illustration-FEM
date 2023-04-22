@@ -216,65 +216,6 @@ main {
     width: 5.2rem;
 }
 
-/* chat animation on page load */
-/* 
-.animate1 {
-    animation: fade-in 0.2s ease-in;
-    animation-delay: 0.2s;
-    animation-fill-mode: both;
-}
-
-.animate2 {
-    animation: fade-in 0.2s ease-in;
-    animation-delay: 0.4s;
-    animation-fill-mode: both;
-}
-
-.animate3 {
-    animation: fade-in 0.2s ease-in;
-    animation-delay: 1.5s;
-    animation-fill-mode: both;
-}
-
-.animate4 {
-    animation: fade-in 0.2s ease-in;
-    animation-delay: 2s;
-    animation-fill-mode: both;
-}
-
-.animate5 {
-    animation: fade-in 0.2s ease-in;
-    animation-delay: 2.3s;
-    animation-fill-mode: both;
-}
-
-.animate6 {
-    animation: fade-in 0.2s ease-in;
-    animation-delay: 3.2s;
-    animation-fill-mode: both;
-}
-
-.animate7 {
-    animation: fade-in 0.2s ease-in;
-    animation-delay: 3.8s;
-    animation-fill-mode: both;
-}
-
-.animate8 {
-    animation: fade-in 0.2s ease-in;
-    animation-delay: 3.8s;
-    animation-fill-mode: both;
-}
-
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-} */
 
 /* dog pictures */
 
