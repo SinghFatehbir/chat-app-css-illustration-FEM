@@ -1,0 +1,446 @@
+:root {
+
+    /* text colors */
+    /* sub-heading at the top of the app UI */
+    --color-text-pale-violet: hsl(276, 100%, 81%);
+    /* Chat on the left */
+    --color-text-moderate-violet: hsl(276, 55%, 52%);
+    --color-text-very-light-moderate-violet: hsla(276, 55%, 52%, 0.08);
+    /* placeholder text */
+    --color-text-grayish-blue: hsl(206, 6%, 79%);
+    /* main heading */
+    --color-text-very-dark-desaturated-violet: hsl(271, 36%, 24%);
+    /* paragraph */
+    --color-text-dark-grayish-violet: hsl(270, 7%, 64%);
+
+    /* Gradient colors */
+    --color-gradient-light-magenta: hsl(293, 100%, 63%);
+    --color-gradient-light-violet: hsl(264, 100%, 61%);
+
+    /* secondary colors */
+    --color-secondary-white: hsl(0, 0%, 100%);
+    /* app background */
+    --color-secondary-light-grayish-violet: hsl(270, 20%, 96%);
+    /* submit button */
+    --color-secondary-very-dark-desaturated-violet: hsl(271, 36%, 24%);
+    /* radio button outline */
+    --color-secondary-very-light-magenta: hsl(289, 100%, 72%);
+
+}
+
+/* css resets start */
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    font: inherit;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* css resets ends */
+
+body {
+    font-family: 'Rubik', sans-serif;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* graphic elements position absolute to the body */
+
+.graphic-element-saturated {
+    height: 83vh;
+    width: 31.5rem;
+    background: linear-gradient(205deg, var(--color-gradient-light-magenta), var(--color-gradient-light-violet) 80%);
+    position: absolute;
+    top: 0;
+    left: -5rem;
+    border-radius: 0 0 100vh 100vh;
+    z-index: -1;
+}
+
+.graphic-element-light {
+    height: 80vh;
+    width: 31.5rem;
+    background: hsla(291, 89%, 89%, 0.12);
+    position: absolute;
+    bottom: 0;
+    right: -11rem;
+    border-radius: 100vh 100vh 0 0;
+    z-index: -2;
+}
+
+/* main content */
+
+main {
+    display: grid;
+    max-width: 58.5rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+
+
+/* phone illustration */
+
+.phone {
+    width: 15.5rem;
+    border: 10px solid var(--color-secondary-white);
+    border-radius: 1.8rem;
+    position: relative;
+    background-color: var(--color-secondary-light-grayish-violet);
+    box-shadow: 10px 20px 50px 0px rgba(0, 0, 0, 0.15);
+    margin: 0 7rem;
+}
+
+/* header part of the phone including notch */
+
+.notch {
+    width: 55%;
+    background-color: var(--color-secondary-white);
+    height: 1.15rem;
+    border-radius: 0 0 14px 14px;
+    position: absolute;
+    left: 50px;
+    top: -1px;
+}
+
+.header {
+    height: 4rem;
+    background: linear-gradient(to right, var(--color-gradient-light-violet), var(--color-gradient-light-magenta));
+    overflow: hidden;
+    border-radius: 1.2rem 1.2rem 0.4rem 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-secondary-white);
+    padding: 1.2rem 0.4rem 0 0.4rem;
+    box-shadow: 0px 14px 30px -16px rgba(150, 150, 150, 0.4);
+}
+
+.header div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.back-icon {
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.user-info a {
+    text-decoration: none;
+    color: var(--color-secondary-white);
+}
+
+.user-availability {
+    font-size: 0.5rem;
+    font-weight: 400;
+    margin-top: -7px;
+    margin-left: -16px;
+    color: var(--color-text-pale-violet);
+}
+
+.avatar {
+    width: 1.4rem;
+    aspect-ratio: 1 / 1;
+    border: 1px solid var(--color-secondary-white);
+    border-radius: 100vh;
+}
+
+.dots {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+}
+
+.dots div {
+    margin: -0.75rem 0;
+}
+
+/* to and from chat bubbles */
+
+.text {
+    font-size: 0.5rem;
+    padding: 0.4rem 0.6rem;
+    width: 8.2rem;
+    line-height: 0.7rem;
+}
+
+.text-left {
+    color: var(--color-text-moderate-violet);
+    background-color: var(--color-text-very-light-moderate-violet);
+    margin: 0.6rem auto 0.6rem 0.6rem;
+    border-radius: 0.7rem 0.7rem 0.7rem 0.3rem;
+}
+
+.text-right {
+    color: hsla(0, 0%, 0%, 0.7);
+    background-color: var(--color-secondary-white);
+    margin: 0.6rem 0.6rem 0.6rem auto;
+    border-radius: 0.7rem 0.7rem 0.3rem 0.7rem;
+    box-shadow: 0px 10px 20px -4px rgba(150, 150, 150, 0.2)
+}
+
+.text-right-small {
+    width: 5.2rem;
+}
+
+.animate1 {
+    animation: fade-in 0.5s ease-in;
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+}
+
+.animate2 {
+    animation: fade-in 0.5s ease-in;
+    animation-delay: 0.4s;
+    animation-fill-mode: both;
+}
+
+.animate3 {
+    animation: fade-in 0.5s ease-in;
+    animation-delay: 1.5s;
+    animation-fill-mode: both;
+}
+
+.animate4 {
+    animation: fade-in 0.5s ease-in;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+}
+
+.animate5 {
+    animation: fade-in 0.5s ease-in;
+    animation-delay: 2.3s;
+    animation-fill-mode: both;
+}
+
+.animate6 {
+    animation: fade-in 0.5s ease-in;
+    animation-delay: 3.2s;
+    animation-fill-mode: both;
+}
+
+.animate7 {
+    animation: fade-in 0.5s ease-in;
+    animation-delay: 3.8s;
+    animation-fill-mode: both;
+}
+
+.animate8 {
+    animation: fade-in 0.5s ease-in;
+    animation-delay: 3.8s;
+    animation-fill-mode: both;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* dog pictures */
+
+figure {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1rem 0.6rem 0.6rem 5.15rem;
+}
+
+figure img {
+    width: 2.5rem;
+    border-radius: 0.6rem;
+}
+
+/* payment info chat bubbles */
+
+.payment-info {
+    background: linear-gradient(to right, var(--color-gradient-light-magenta), var(--color-gradient-light-violet));
+    margin: 0.6rem auto 0.6rem 0.6rem;
+    border-radius: 0.7rem 0.7rem 0.7rem 0.3rem;
+    width: 10rem;
+    padding: 0.6rem 1rem 0.6rem 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.payment-info div {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.payment-heading {
+    font-size: 0.5rem;
+    font-weight: 400;
+    color: hsla(0, 0%, 100%, 0.7);
+}
+
+.payment {
+    font-weight: 500;
+    font-size: 0.75rem;
+    color: var(--color-secondary-white);
+}
+
+/* radio button */
+.circle {
+    width: 0.75rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 100vh;
+    border: 1px solid var(--color-secondary-very-light-magenta);
+}
+
+.message-input {
+    background-color: var(--color-secondary-white);
+    margin: 0.9rem 0.6rem 0.6rem 0.6rem;
+    padding: 0.3rem;
+    border-radius: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.placeholder-text {
+    font-size: 0.6rem;
+    margin-left: 1rem;
+    margin-top: 0.2rem;
+    color: var(--color-text-grayish-blue);
+}
+
+.send-icon {
+    background-color: var(--color-text-very-dark-desaturated-violet);
+    width: 1.5rem;
+    font-size: 0.9rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 100vh;
+    color: var(--color-secondary-white);
+    padding-left: 0.55rem;
+    padding-top: 0.17rem;
+    font-weight: 700;
+}
+
+
+/* hero info section */
+
+.hero-section {
+    margin: auto 0;
+    padding: 0 0.8rem 0.5rem 0.8rem;
+    z-index: 98;
+}
+
+.heading {
+    color: var(--color-text-very-dark-desaturated-violet);
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.info {
+    color: var(--color-text-dark-grayish-violet);
+    font-weight: 400;
+    line-height: 1.7rem;
+}
+
+/* media queries to move graphic elements as screen gets smaller */
+
+@media (max-width: 66rem) {
+    .graphic-element-saturated {
+        top: -50px;
+        left: -15rem;
+    }
+
+    .graphic-element-light {
+        bottom: -50px;
+        right: -15rem;
+    }
+}
+
+/* media query for mobile design */
+
+@media (max-width: 56rem) {
+
+    /* remove extra space on x axis on mobile view */
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    main {
+        display: grid;
+        max-width: 58.5rem;
+        grid-template-columns: none;
+        margin: 0 auto;
+    }
+
+    .phone {
+        margin: 3rem auto;
+    }
+
+    .hero-section {
+        max-width: 31rem;
+        padding: 0 2rem 0 2rem;
+        text-align: center;
+    }
+}
+
+/* media queries to move graphic elements as screen gets smaller */
+
+@media (max-width: 31rem) {
+    .graphic-element-saturated {
+        top: -150px;
+        left: -20rem;
+    }
+
+    .graphic-element-light {
+        bottom: -100px;
+        right: -20rem;
+    }
+}
+
+@media (max-width: 24rem) {
+    .graphic-element-saturated {
+        top: -200px;
+        left: -20rem;
+    }
+
+    .graphic-element-light {
+        bottom: -200px;
+        right: -20rem;
+    }
+}
