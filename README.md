@@ -23,8 +23,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://www.frontendmentor.io/solutions/tip-calculator-responsive-html-css-js-VisPxPeO9A)
-- Live Site URL: [Live Site](https://singhfatehbir.github.io/Tip-Calculator-FEM/)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/chat-app-css-responsive-animation-html-css-EamNcDcs5a)
+- Live Site URL: [Live Site](https://singhfatehbir.github.io/chat-app-css-illustration-FEM/)
 
 ### Built with
 
